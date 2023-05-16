@@ -20,9 +20,9 @@ const doneItem = (itemId) => {
 
 const listItems = items.map((item) => {
   return (
-  <li key= {item.id}>{item.name}
+  <li key= {item.id}>{item.name}   
 
-    <button onClick={() => doneItem(item.id)}>Done</button>
+    <button onClick={() => doneItem(item.id)}>  Done  </button>
     </li>     
     )
 });
@@ -42,33 +42,39 @@ const saveNewItem = (event) => {
 
   return (
     <div className="App">
-      
+ 
     {/* Hint for hw: <h1 className = {conditional ? "this class if true": "or this classif false"} >Shopping List */}
       <h1>My Baking To Do List - {items.length ? "Keep on baking": "Enjoy!"}</h1> 
       {/* if this statement items.length is true (ie there are still items on your list) then print "keep shopping" - term is called a ternary (three) */}
       
       <hr></hr>
-      <h2> Ingredients needed:</h2>
-      <ul>
-        <li>400ml - soya milk</li>
-        <li>1 tablespoon - lemon juice</li>
-        <li>1/4 cup - corn oil</li>
-        <li>200g - self raising flour</li>
-        <li>1 teaspoon - bicarbonate of soda</li>
-        <li>150g - caster sugar </li>
-      </ul>
+      <container>
+      <div>
+        <h2> Ingredients needed:</h2>
+        
+        <ul>
+          <li>400ml - soya milk</li>
+          <li>1 tablespoon - lemon juice</li>
+          <li>1/4 cup - corn oil</li>
+          <li>200g - self raising flour</li>
+          <li>1 teaspoon - bicarbonate of soda</li>
+          <li>150g - caster sugar </li>
+        </ul>
 
+        <form onSubmit={saveNewItem}>
+          <label htmlFor = 'new-item'> Add a new instruction: </label>
+          <input id='new-item' type = 'text' value = {newItem} onChange={handleItemInput}/>
+          <input type='submit' value='Save new instruction'/>
+      </form>
+      </div>
+
+      <img src={logo} alt="Cakes background"/>; 
+      </container>
+      
       <ul>
       {listItems}
       </ul>
-
-      <form onSubmit={saveNewItem}>
-        <label htmlFor = 'new-item'> Add a new item: </label>
-        <input id='new-item' type = 'text' value = {newItem} onChange={handleItemInput}/>
-        <input type='submit' value='Save new item'/>
-      </form>
-
-      <img src={logo} alt="Cakes background"/>;
+      <hr></hr>
     </div>
 
   );
