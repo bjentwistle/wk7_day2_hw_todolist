@@ -50,7 +50,7 @@ const saveNewItem = (event) => {
       <hr></hr>
       <container>
       <div>
-        <h2> Ingredients needed:</h2>
+        <h2> Ingredients needed: </h2>
         
         <ul>
           <li>400ml - soya milk</li>
@@ -68,7 +68,7 @@ const saveNewItem = (event) => {
       </form>
       </div>
 
-      <img src={logo} alt="Cakes background"/>; 
+      <img src={logo} alt="Cakes background"/>
       </container>
       
       <ul>
