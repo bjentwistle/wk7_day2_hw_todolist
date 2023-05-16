@@ -1,24 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import logo from './cakes.jpeg'; // Tell webpack this JS file uses this image
+
+console.log(logo); //
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <h1> My Baking To Do List </h1>
+      <img src={logo} alt="Cakes background"/>;
     </div>
+
   );
 }
 
